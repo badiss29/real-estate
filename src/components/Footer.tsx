@@ -61,15 +61,21 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-sm uppercase tracking-wider mb-4">Property Types</h3>
             <ul className="space-y-3">
-              {['Luxury Villas', 'Modern Apartments', 'Family Homes', 'Penthouses', 'Beach Houses', 'Condos'].map(
-                (type) => (
-                  <li key={type}>
+              {[
+                { name: 'Luxury Villas', search: 'Villa' },
+                { name: 'Modern Apartments', search: 'Apartment' },
+                { name: 'Family Homes', search: 'House' },
+                { name: 'Penthouses', search: 'Penthouse' },
+                { name: 'Beach Houses', search: 'Beach House' },
+                { name: 'Condos', search: 'Condo' },
+              ].map((type) => (
+                  <li key={type.name}>
                     <Link
-                      to="/properties"
+                      to={`/properties?search=${encodeURIComponent(type.search)}`}
                       className="text-sm text-muted-foreground hover:text-emerald-600 transition-colors flex items-center gap-2 group"
                     >
                       <ArrowRight className="h-3 w-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
-                      <span>{type}</span>
+                      <span>{type.name}</span>
                     </Link>
                   </li>
                 )
