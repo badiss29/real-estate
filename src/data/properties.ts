@@ -1,6 +1,7 @@
 import type { Property } from '@/types/property';
+import { asset } from '@/lib/assets';
 
-const imgs = (a: number, b: number, c: number) => [`/images/property-${a}.png`, `/images/property-${b}.png`, `/images/property-${c}.png`];
+const imgs = (a: number, b: number, c: number) => [asset(`images/property-${a}.png`), asset(`images/property-${b}.png`), asset(`images/property-${c}.png`)];
 
 export const properties: Property[] = [
   { id:'1', title:'Modern Luxury Villa with Pool', description:'Experience the epitome of luxury living in this stunning modern villa featuring an infinity pool, expansive glass walls, and breathtaking sunset views. Gourmet kitchen with top-of-the-line appliances, marble countertops, and a grand island. Smart home technology throughout, private cinema room, and landscaped garden with mature palm trees.', price:2850000, city:'Miami', address:'1245 Ocean Drive, Miami Beach, FL 33139', bedrooms:5, bathrooms:4, area:4800, type:'Villa', status:'For Sale', yearBuilt:2022, images:imgs(1,4,5), features:['Infinity Pool','Smart Home','Ocean View','Private Cinema','Wine Cellar','Gated Community','3-Car Garage','Landscaped Garden'], agent:{name:'Sarah Mitchell',phone:'+1 (305) 555-0142',email:'sarah.mitchell@luxeestates.com',avatar:'https://api.dicebear.com/9.x/avataaars/svg?seed=Sarah'}, isFeatured:true, createdAt:'2024-01-15' },

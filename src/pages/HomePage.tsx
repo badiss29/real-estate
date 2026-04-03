@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { asset } from '@/lib/assets';
 import { properties } from '@/data/properties';
 import { PropertyCard } from '@/components/PropertyCard';
 import { Button } from '@/components/ui/button';
@@ -36,14 +37,14 @@ export function HomePage() {
   ];
 
   const popularCities = [
-    { name: 'Miami', count: 45, image: '/images/property-5.png' },
-    { name: 'New York', count: 82, image: '/images/property-2.png' },
-    { name: 'Los Angeles', count: 63, image: '/images/property-4.png' },
-    { name: 'Austin', count: 31, image: '/images/property-3.png' },
-    { name: 'Denver', count: 28, image: '/images/property-1.png' },
-    { name: 'Chicago', count: 54, image: '/images/property-6.png' },
-    { name: 'Nashville', count: 22, image: '/images/property-3.png' },
-    { name: 'San Francisco', count: 47, image: '/images/property-4.png' },
+    { name: 'Miami', count: 45, image: asset('images/property-5.png') },
+    { name: 'New York', count: 82, image: asset('images/property-2.png') },
+    { name: 'Los Angeles', count: 63, image: asset('images/property-4.png') },
+    { name: 'Austin', count: 31, image: asset('images/property-3.png') },
+    { name: 'Denver', count: 28, image: asset('images/property-1.png') },
+    { name: 'Chicago', count: 54, image: asset('images/property-6.png') },
+    { name: 'Nashville', count: 22, image: asset('images/property-3.png') },
+    { name: 'San Francisco', count: 47, image: asset('images/property-4.png') },
   ];
 
   return (
@@ -53,7 +54,7 @@ export function HomePage() {
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-bg.png"
+            src={asset('images/hero-bg.png')}
             alt="Beautiful neighborhood"
             className="h-full w-full object-cover"
           />
@@ -294,7 +295,7 @@ export function HomePage() {
         <div className="container mx-auto px-4">
           <div className="relative rounded-3xl overflow-hidden">
             <img
-              src="/images/property-1.png"
+              src={asset('images/property-1.png')}
               alt="Luxury property"
               className="absolute inset-0 h-full w-full object-cover"
             />
